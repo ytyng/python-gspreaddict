@@ -50,7 +50,7 @@ Get instances,
 
 ::
 
-    record = TestRecord.objects.get(key=value))
+    record = TestRecord.objects.get(key=value)
 
 ::
 

@@ -44,7 +44,7 @@ xxxxxxxxxxxx@appspot.gserviceaccount.com
 spreadsheet_key は、GoogleスプレッドシートのURLに含まれるIDの文字列。
 credentials_json_path は、ダウンロードした認証情報にアクセスするパス。
 
-    record = TestRecord.objects.get(key=value))
+    record = TestRecord.objects.get(key=value)
 
 とか
 
