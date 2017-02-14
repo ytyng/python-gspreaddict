@@ -62,13 +62,13 @@ credentials_json_path は、ダウンロードした認証情報にアクセス�
         credentials_json_path = os.path.join(
             os.path.dirname(__file__), "My Project-xxxxxxxx.json")
 
-    @classmethod
-    def cache_set(cls, key, value):
-        caches['gspreaddict'].set(key, value)
-
-    @classmethod
-    def cache_get(cls, key):
-        return caches['gspreaddict'].get(key)
+        @classmethod
+        def cache_set(cls, key, value):
+            caches['gspreaddict'].set(key, value)
+    
+        @classmethod
+        def cache_get(cls, key):
+            return caches['gspreaddict'].get(key, CacheNotProvided)
 
 cache_set, cache_get をオーバーライドすることで、
 Google へのアクセスをキャッシュすることができます。

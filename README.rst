@@ -68,12 +68,12 @@ Caching
         credentials_json_path = os.path.join(
             os.path.dirname(__file__), "My Project-xxxxxxxx.json")
 
-    @classmethod
-    def cache_set(cls, key, value):
-        caches['gspreaddict'].set(key, value)
+        @classmethod
+        def cache_set(cls, key, value):
+            caches['gspreaddict'].set(key, value)
 
-    @classmethod
-    def cache_get(cls, key):
-        return caches['gspreaddict'].get(key)
+        @classmethod
+        def cache_get(cls, key):
+            return caches['gspreaddict'].get(key, CacheNotProvided)
 
 Override cache_set and cache_get classmethods.
