@@ -135,7 +135,7 @@ class GSpreadDictManager(object):
         return filter(_match, self.all())
 
     def get(self, *args, **kwargs):
-        all_matches = self.filter(*args, **kwargs)
+        all_matches = list(self.filter(*args, **kwargs))
         if not len(all_matches):
             raise self.owner.DoesNotExist(
                 'args={}, kwargs={}'.format(args, kwargs))
