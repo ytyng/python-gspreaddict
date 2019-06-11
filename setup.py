@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 from setuptools import setup, find_packages
-from gspreaddict import __author__, __version__, __license__
+
+__author__ = 'ytyng'
+__version__ = '0.1.3'
+__license__ = 'MIT'
 
 # In [2]: from setuptools.command.bdist_egg import _get_purelib
 #

@@ -7,13 +7,9 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 try:
-    from django.utils.functional import cached_property
+    from pip._vendor.distlib.util import cached_property
 except ImportError:
     cached_property = property
-
-__author__ = 'ytyng'
-__version__ = '0.1.1'
-__license__ = 'MIT'
 
 
 class GSpreadDictIncompleteConfigured(Exception):
