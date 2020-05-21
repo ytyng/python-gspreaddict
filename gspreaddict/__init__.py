@@ -52,7 +52,7 @@ class GSpreadDictManager(object):
     def gspread_document(self):
         return self.gspread_client.open_by_key(self.owner.spreadsheet_key)
 
-    @cached_property
+    @property
     def worksheet(self):
         if self.owner.sheet_name:
             for ws in self.gspread_document.worksheets():
@@ -63,7 +63,7 @@ class GSpreadDictManager(object):
         else:
             return self.gspread_document.sheet1
 
-    @cached_property
+    @property
     def _all_values(self):
         return self.worksheet.get_all_values()
 

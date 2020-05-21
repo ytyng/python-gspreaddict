@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 __author__ = 'ytyng'
-__version__ = '0.1.3'
+__version__ = '0.1.4'
 __license__ = 'MIT'
 
 # In [2]: from setuptools.command.bdist_egg import _get_purelib
